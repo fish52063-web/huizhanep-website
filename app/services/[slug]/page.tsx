@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {}
   return {
     title: `${service.name}｜${service.keyword}推薦｜${SITE_NAME}`,
-    description: `${service.keyword}推薦惠展環保！${service.shortDesc}免費到府估價，專業施工有保固。價格：${service.priceRange}。`,
+    description: `${service.keyword}推薦惠展環保！${service.shortDesc}免費到府估價，專業施工有保固。依照面積報價，歡迎來電洽詢。`,
     alternates: { canonical: `/services/${slug}/` },
   }
 }
@@ -76,7 +76,7 @@ export default async function ServicePage({ params }: Props) {
 
         <h2 className="text-3xl font-bold text-gray-800 mb-4">{service.keyword}｜{service.name}服務</h2>
         <p className="text-lg text-gray-600 mb-2">{service.shortDesc}</p>
-        <p className="text-primary-700 font-medium mb-8">參考價格：{service.priceRange}</p>
+        <p className="text-primary-700 font-medium mb-8">報價方式：依照面積報價，歡迎來電免費估價</p>
 
         {post ? (
           <>
@@ -151,18 +151,8 @@ function ServiceContent({ slug, serviceName, keyword }: { slug: string; serviceN
           <li><strong>除膠除漬</strong>：處理殘膠、水泥漬、油漆點</li>
           <li><strong>收尾驗收</strong>：最終檢查、客戶驗收</li>
         </ol>
-        <h2>價格參考</h2>
-        <p>裝潢後細清費用依坪數和裝潢程度而定：</p>
-        <table>
-          <thead><tr><th>坪數</th><th>基本細清</th><th>深度細清</th></tr></thead>
-          <tbody>
-            <tr><td>20坪以下</td><td>NT$3,000-5,000</td><td>NT$5,000-8,000</td></tr>
-            <tr><td>20-35坪</td><td>NT$5,000-8,000</td><td>NT$8,000-12,000</td></tr>
-            <tr><td>35-50坪</td><td>NT$8,000-12,000</td><td>NT$12,000-15,000</td></tr>
-            <tr><td>50坪以上</td><td>另行報價</td><td>另行報價</td></tr>
-          </tbody>
-        </table>
-        <p>以上為參考價格，實際費用請來電預約免費到府估價。</p>
+        <h2>報價方式</h2>
+        <p>裝潢後細清費用依照面積大小、裝潢程度及清潔難度而定，歡迎來電預約免費到府估價，專業人員將到場評估並提供詳細報價單。</p>
       </>
     ),
     'formaldehyde-removal': (
@@ -186,15 +176,8 @@ function ServiceContent({ slug, serviceName, keyword }: { slug: string; serviceN
           <li><strong>複檢驗收</strong>：施工後再次檢測，確保達標（≤0.08 mg/m³）</li>
           <li><strong>保固追蹤</strong>：一年保固，定期追蹤檢測</li>
         </ol>
-        <h2>價格參考</h2>
-        <table>
-          <thead><tr><th>坪數</th><th>光觸媒施工</th><th>全套方案</th></tr></thead>
-          <tbody>
-            <tr><td>20坪以下</td><td>NT$5,000-10,000</td><td>NT$10,000-18,000</td></tr>
-            <tr><td>20-35坪</td><td>NT$10,000-18,000</td><td>NT$18,000-25,000</td></tr>
-            <tr><td>35-50坪</td><td>NT$18,000-25,000</td><td>NT$25,000-30,000</td></tr>
-          </tbody>
-        </table>
+        <h2>報價方式</h2>
+        <p>除甲醛費用依照面積大小及施工方案而定，歡迎來電預約免費到府檢測與估價。</p>
       </>
     ),
   }
@@ -228,14 +211,14 @@ function getFAQsForService(slug: string): { question: string; answer: string }[]
   const faqMap: Record<string, { question: string; answer: string }[]> = {
     'post-renovation-cleaning': [
       { question: '裝潢後細清需要多少時間？', answer: '一般20-35坪住宅約需4-8小時，視裝潢程度而定。大坪數或汙染嚴重的情況可能需要1-2天。' },
-      { question: '裝潢後細清費用怎麼算？', answer: '費用依坪數和清潔程度而定，一般20-35坪約NT$5,000-12,000。建議預約免費到府估價以獲得準確報價。' },
+      { question: '裝潢後細清費用怎麼算？', answer: '費用依照面積大小和清潔程度而定。建議預約免費到府估價，專業人員會到場評估後提供準確報價。' },
       { question: '自己做細清和請專業團隊有什麼差別？', answer: '專業團隊擁有工業級設備、專業清潔劑和豐富經驗，能處理殘膠、水泥漬等一般人難以清除的汙漬，效果遠優於DIY。' },
       { question: '裝潢後細清完就可以入住嗎？', answer: '是的，我們使用環保無毒清潔劑，細清完成即可安心入住。若有除甲醛需求，建議同時進行。' },
     ],
     'formaldehyde-removal': [
       { question: '新房子一定要除甲醛嗎？', answer: '建議先進行甲醛檢測。如果裝潢使用了大量木作、系統櫃、油漆等材料，甲醛超標的機率很高，建議進行專業除甲醛。' },
       { question: '除甲醛後多久可以入住？', answer: '光觸媒施工後建議通風24-48小時即可入住。我們會在施工後進行複檢，確認甲醛濃度降至安全標準以下。' },
-      { question: '除甲醛費用大概多少？', answer: '依坪數和施工方案而定，一般20-35坪光觸媒施工約NT$10,000-18,000。提供一年保固，保證檢測合格。' },
+      { question: '除甲醛費用大概多少？', answer: '費用依照面積大小和施工方案而定，提供一年保固，保證檢測合格。歡迎來電預約免費到府檢測與估價。' },
       { question: '除甲醛效果能維持多久？', answer: '光觸媒除甲醛效果可維持5-10年，且會持續分解新釋放的甲醛。我們提供一年保固，期間免費複檢。' },
     ],
     'bathroom-coating': [
@@ -271,7 +254,7 @@ function getFAQsForService(slug: string): { question: string; answer: string }[]
   }
 
   return faqMap[slug] || [
-    { question: `${SERVICES.find(s => s.slug === slug)?.name}費用怎麼算？`, answer: '費用依施工面積和難度而定。歡迎來電預約免費到府估價，我們會提供詳細的書面報價。' },
+    { question: `${SERVICES.find(s => s.slug === slug)?.name}費用怎麼算？`, answer: '費用依照面積大小和施工難度而定。歡迎來電預約免費到府估價，我們會提供詳細的書面報價。' },
     { question: '施工後有保固嗎？', answer: '所有服務都提供施工保固，保固期間如有品質問題免費回訪處理。' },
     { question: '你們的服務範圍涵蓋哪裡？', answer: '我們服務高雄市全區、屏東市及台南市地區。' },
   ]

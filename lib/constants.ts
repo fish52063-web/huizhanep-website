@@ -36,7 +36,7 @@ export const SERVICES = [
     shortDesc: '新屋裝潢後的深度清潔，去除粉塵、殘膠、水泥漬，還您乾淨舒適的新居。',
     keyword: '高雄裝潢後細清',
     icon: '🏠',
-    priceRange: 'NT$3,000 - NT$15,000',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'formaldehyde-removal',
@@ -44,7 +44,7 @@ export const SERVICES = [
     shortDesc: '採用日本光觸媒技術，有效分解甲醛、TVOC，守護家人健康。',
     keyword: '高雄除甲醛',
     icon: '🧪',
-    priceRange: 'NT$5,000 - NT$30,000',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'bathroom-coating',
@@ -52,7 +52,7 @@ export const SERVICES = [
     shortDesc: '奈米鍍膜技術，防水垢、防霉菌，讓浴室長效亮麗。',
     keyword: '高雄衛浴鍍膜',
     icon: '🚿',
-    priceRange: 'NT$3,000 - NT$12,000',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'solar-panel-installation',
@@ -60,7 +60,7 @@ export const SERVICES = [
     shortDesc: '太陽能板規劃、安裝、維護一站式服務，節能減碳愛地球。',
     keyword: '高雄太陽能板安裝',
     icon: '☀️',
-    priceRange: '依坪數報價',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'concrete-grinding',
@@ -68,7 +68,7 @@ export const SERVICES = [
     shortDesc: '專業地坪研磨拋光，打造光亮耐用的水泥地面。',
     keyword: '高雄混凝土地坪研磨',
     icon: '🏗️',
-    priceRange: 'NT$800 - NT$2,000/坪',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'stone-care',
@@ -76,7 +76,7 @@ export const SERVICES = [
     shortDesc: '大理石、花崗石研磨拋光、晶化處理，恢復石材天然光澤。',
     keyword: '高雄石材美容',
     icon: '💎',
-    priceRange: 'NT$1,000 - NT$3,000/坪',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'exterior-wall-cleaning',
@@ -84,7 +84,7 @@ export const SERVICES = [
     shortDesc: '高空外牆清洗、防水塗層施工，解決壁癌漏水問題。',
     keyword: '高雄外牆清洗',
     icon: '🏢',
-    priceRange: '依面積報價',
+    priceRange: '依照面積報價',
   },
   {
     slug: 'tile-grout-repair',
@@ -92,7 +92,7 @@ export const SERVICES = [
     shortDesc: '磁磚縫隙清潔、填縫、防霉處理，煥然一新。',
     keyword: '高雄磁磚縫美容',
     icon: '🔲',
-    priceRange: 'NT$2,000 - NT$8,000',
+    priceRange: '依照面積報價',
   },
 ]
 
