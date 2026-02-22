@@ -1,5 +1,5 @@
 export const SITE_NAME = '惠展環保'
-export const SITE_URL = 'https://www.huizhanep.com.tw'
+export const SITE_URL = 'https://www.huizhan.com.tw'
 export const SITE_DESCRIPTION = '高雄專業清潔公司｜裝潢後細清、除甲醛、外牆清洗、石材美容、衛浴鍍膜、太陽能板安裝。惠展環保提供全方位環保清潔工程服務，服務高雄、屏東、台南地區。'
 
 export const COMPANY_INFO = {
