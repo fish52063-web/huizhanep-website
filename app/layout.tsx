@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
 }
 
-const GA4_ID = 'G-HUIZHAN_ID'; // TODO: 替換成真實 GA4 測量 ID
+const GA4_ID = 'G-3F85BE3EV1';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
