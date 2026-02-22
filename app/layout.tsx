@@ -8,7 +8,6 @@ import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/constants'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  other: { 'google-site-verification': 'geZNPHoFtllblmpWCz5v31cfRlUQui-AU9iJJ3ZhMzw' },
   title: {
     default: `${SITE_NAME}｜高雄專業清潔公司・裝潢後細清・除甲醛`,
     template: `%s｜${SITE_NAME}`,
@@ -46,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-TW">
       <head>
+        <meta name="google-site-verification" content="geZNPHoFtllblmpWCz5v31cfRlUQui-AU9iJJ3ZhMzw" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
