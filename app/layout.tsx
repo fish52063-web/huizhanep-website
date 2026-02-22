@@ -8,6 +8,7 @@ import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/constants'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  other: { 'google-site-verification': 'geZNPHoFtllblmpWCz5v31cfRlUQui-AU9iJJ3ZhMzw' },
   title: {
     default: `${SITE_NAME}｜高雄專業清潔公司・裝潢後細清・除甲醛`,
     template: `%s｜${SITE_NAME}`,
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
   },
 }
 
+const GA4_ID = 'G-HUIZHAN_ID'; // TODO: 替換成真實 GA4 測量 ID
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-TW">
@@ -49,6 +52,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        {/* Google Analytics GA4 */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA4_ID}');
+        `}} />
         <SchemaMarkup schema={[generateOrganizationSchema(), generateLocalBusinessSchema()]} />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-gray-800">
