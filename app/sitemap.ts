@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next'
 import { SERVICES, AREAS, BLOG_CATEGORIES, SITE_URL } from '@/lib/constants'
 import { getAllPosts } from '@/lib/mdx'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL
 
